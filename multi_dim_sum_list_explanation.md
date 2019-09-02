@@ -196,7 +196,7 @@ Alright, now let's backtrack, and handle the case when the `elem` is a list, and
 So, if our program steps inside the `if` statement we just created, we know the current `elem` is a list. But we can't add a list to a number. We also know that the current list may have numbers inside of it, or it might have even more lists inside of it. We don't know how many layers the lists within the list go. We need to test the current list to see if it has numbers or lists inside of it.
 
 
-Wait a minute!  Isn't that what our function already does?  Doesn't it take a list, look through it, and see if the current `elem` is a number or a list?  **What if we could call our function again and test this current element (which is a list) and see if there are any more lists inside of it?**  We can absolutely do that. This is called recursion.  Let's study this for a second.
+Wait a minute!  Isn't that what our function already does?  Doesn't it take a list, look through it, and see if the current `elem` is a number or a list?  **What if we could call our function again and test this current `elem` (which is a list) and see if there are any more lists inside of it?**  We can absolutely do that. This is called recursion.  Let's study this for a second.
 
 <br>
 
