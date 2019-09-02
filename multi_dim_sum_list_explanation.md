@@ -286,7 +286,8 @@ multi_dim_list_sum(test_list)
     else:
         sum += 4
 
-# we are now at the end of our for loop. Our new instance is ready to return our new sum, which is 7, back to our original function. 
+# we are now at the end of our for loop. 
+# our new instance is ready to return our new sum, which is 7, back to our original function. 
 # our original function now takes that return value, "unpauses" itself, and evaluates the original if statement. 
     if type(elem) == type([]):
         sum += 7
