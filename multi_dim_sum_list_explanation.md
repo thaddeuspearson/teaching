@@ -284,7 +284,8 @@ multi_dim_list_sum(test_list)
         sum += multi_dim_list_sum([3, 4])
 
 
-# here is where the recursion happens. our original function "pauses" and our original sum variable is "saved" at 3. 
+# here is where the recursion happens. 
+# our original function "pauses" and our original sum variable is "saved" at 3. 
 # we begin to run this new instance of our function, with our new list, [3 , 4] and a new sum starting at 0. 
 # our new instance starts with the first elem of our new list, which is 3. 
 # since 3 is a number, it hits our else statement, and adds 3 to our new sum:
