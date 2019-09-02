@@ -34,7 +34,8 @@ Summing all of the numbers in a multi-dimensional list (or array) is a very comm
 <br>
 
 ```
-You are given a list. This list will only contain numbers (ints), or more lists. Write a function that adds up all of the numbers existing within the parent list.
+You are given a list. This list will only contain numbers (ints), or more lists. 
+Write a function that adds up all of the numbers existing within the parent list.
 ```
 <br>
 
