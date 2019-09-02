@@ -112,7 +112,7 @@ def multi_dim_list_sum(lst):
     for elem in lst:
 ```
 
-Excellent. We are looking at each element one at a time. Here is some more info on <a href="https://www.w3schools.com/python/python_for_loops.asp">python for loops</a>
+Excellent. We are looking at each `elem` one at a time. Here is some more info on <a href="https://www.w3schools.com/python/python_for_loops.asp">python for loops</a>
 
 
 <br>
