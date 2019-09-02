@@ -39,7 +39,7 @@ You are given a list. This list will only contain numbers (ints), or more lists.
 <br>
 
 
-Sounds easy enough, but this one is tricky. Let's break down this problem with some pseudocode. 
+Sounds easy enough, but this one is *tricky*. Let's break down this problem with some pseudocode. 
 
 
 <br>
@@ -102,7 +102,7 @@ Our `sum` is defined within the scope of the function, and it will keep track of
 ## Iterate Through the List
 
 
-We will need to look at each element inside the list one at a time. This is an excellent opportunity to use a `for loop`.
+We will need to look at each element (`elem`) inside the list one at a time. This is an excellent opportunity to use a `for` loop.
 
 
 ```python
@@ -120,7 +120,7 @@ Excellent. We are looking at each `elem` one at a time. Here is some more info o
 ## If the Current Item is a List:
 
 
-In this coding challenge, each element inside of our list will either be a number (int) or another list. we will need to write an `if` statement to test if the current element is a list.
+In this coding challenge, each `elem` inside of our list will either be a number or another list. we will need to write an `if` statement to test if the current element is a list.
 
 
 ```python
@@ -131,7 +131,7 @@ def multi_dim_list_sum(lst):
         if type(elem) == type([]):
 ```
 
-Let's unpack this one a bit. This statement uses python's <a href="https://www.geeksforgeeks.org/type-isinstance-python/">type method</a>.  This will evaluate what data type is passed into it. In our function, we are comparing the `type` of the current element (`elem`) to see if it is <a href="https://dbader.org/blog/difference-between-is-and-equals-in-python">strictly equal</a> (`==`) to the type of an empty list (`[]`).  If this statement returns true, our function will step inside of the `if` statement. *Note, the "is" operator would also work in this instance, because we are comparing the type of both.*
+Let's unpack this one a bit. This statement uses python's <a href="https://www.geeksforgeeks.org/type-isinstance-python/">type method</a>.  This will evaluate what data type is passed into it. In our function, we are comparing the `type` of the current element `elem` to see if it is <a href="https://dbader.org/blog/difference-between-is-and-equals-in-python">strictly equal</a> `==` to the type of an empty list `[]`.  If this statement returns true, our function will step inside of the `if` statement. **Note, the "is" operator would also work in this instance, because we are comparing the type of both.**
 
 
 <br>
@@ -142,7 +142,7 @@ Let's unpack this one a bit. This statement uses python's <a href="https://www.g
 I am skipping the next step for a second to complete our `if/else` statement.  We will come back to what happens inside the if statement in a moment.
 
 
-In the case that the current element is a number, we want to add it to our `sum`. We are given the fact that the element is definately a number, because if it were a list, our program would have stepped inside of our if statement.  So lets add our number to our sum!
+In the case that the current element is a number, we want to add it to our `sum`. We are given the fact that the `elem` is definately a number, because if it were a list, our program would have stepped inside of our if statement.  So let's add our number to our `sum`!
 
 
 ```python
@@ -165,7 +165,7 @@ So our function has determined that the current element is a number, and it has 
 ## Return the Sum
 
 
-Since we are at the end of our function already, let's finish things up by returning our sum when our for loop returns.
+Since we are at the end of our function already, let's finish things up by returning our `sum` when our `for` loop returns.
 
 
 ```python
@@ -181,7 +181,7 @@ def multi_dim_list_sum(lst):
     return sum
 ```
 
-Awesome.  Now our function returns our sum when it is done going through our initial list and adding each number to the sum. Take note, we placed the indentation for the `return` statement in line with the for loop, because we want the entire for loop to finish, *before* we return our `sum`.
+Awesome.  Now our function returns our `sum` when it is done going through our initial list and adding each number to the `sum`. Take note, we placed the indentation for the `return` statement in line with the `for` loop, because we want the entire `for` loop to finish, *before* we `return` our `sum`.
 
 
 <br>
@@ -189,13 +189,13 @@ Awesome.  Now our function returns our sum when it is done going through our ini
 ## Handle the List
 
 
-Alright, now let's backtrack, and handle the case when the element is a list, and not a number.
+Alright, now let's backtrack, and handle the case when the `elem` is a list, and not a number.
 
 
-So, if our program steps inside the if statement we just created, we know the current element is a list. But we can't add a list to a number. We also know that the current list may have numbers inside of it, or it might have more lists inside of it. We don't know how many layers the lists within the list go. We need to test the current list to see if it has numbers or lists inside of it.
+So, if our program steps inside the if statement we just created, we know the current `elem` is a list. But we can't add a list to a number. We also know that the current list may have numbers inside of it, or it might have more lists inside of it. We don't know how many layers the lists within the list go. We need to test the current list to see if it has numbers or lists inside of it.
 
 
-Wait a minute!  Isn't that what our function already does?  Doesn't it take a list, look through it, and see if the current element is a number or a list?  What if we could call our function again and test this current element (which is a list) and see if there are any more lists inside of it?  We can absolutely do that. This is called recursion.  Let's study this for a second.
+Wait a minute!  Isn't that what our function already does?  Doesn't it take a list, look through it, and see if the current `elem` is a number or a list?  What if we could call our function again and test this current element (which is a list) and see if there are any more lists inside of it?  We can absolutely do that. This is called recursion.  Let's study this for a second.
 
 <br>
 
@@ -211,7 +211,7 @@ or more simply put:
 > A function that calls itself.
 
 
-We are going to call our function, within our function.  Because of our if statement, this recursion will only happen in our function if the current element we are evaluating is a list.  When our function finda a list, it will re-call itself with the list that it found! 
+We are going to call our function, within our function.  Because of our if statement, this recursion will only happen in our function if the current `elem` we are evaluating is a list.  When our function finda a list, it will re-call itself with the list that it found! 
 
 
 ```python
