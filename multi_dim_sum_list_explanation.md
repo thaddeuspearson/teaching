@@ -143,7 +143,7 @@ Let's unpack this one a bit. This statement uses python's <a href="https://www.g
 I am skipping the next step for a second to complete our `if/else` statement.  We will come back to what happens inside the `if` statement in a moment.
 
 
-In the case that the current `elem` is a number, we want to add it to our `sum`. We are given the fact that the `elem` is definately a number, because if it were a list, our program would have stepped inside of our if statement.  So let's add our number to our `sum`!
+In the case that the current `elem` is a number, we want to add it to our `sum`. We are given the fact that the `elem` is definately a number, because if it were a list, our program would have stepped inside of our `if` statement.  So let's add our number to our `sum`!
 
 
 ```python
@@ -212,7 +212,7 @@ or more simply put:
 > **A function that calls itself.**
 
 
-We are going to call our function, within our function.  Because of our if statement, this recursion will only happen in our function if the current `elem` we are evaluating is a list.  When our function finds a list, it will re-call itself with the list that it found! 
+We are going to call our function, within our function.  Because of our `if` statement, this recursion will only happen in our function if the current `elem` we are evaluating is a list.  When our function finds a list, it will re-call itself with the list that it found! 
 
 
 ```python
@@ -318,7 +318,7 @@ multi_dim_list_sum(test_list)
 <br>
 
 
-What is really cool about our function is that it will handle any amount of lists within a list, provided that the only thing any of these lists contain are eithermore lists or numbers.
+What is really cool about our function is that it will handle any amount of lists within a list, provided that the only thing any of these lists contain are either more lists or numbers.
 
 
 For example, it would be able to evaluate this crazy list:
@@ -330,7 +330,7 @@ For example, it would be able to evaluate this crazy list:
 
 crazy_list = [2, 7, [2, [2 , 3]], 4, [[1, [3, [[[[8]]]], 6], 6], 2], 4]
 
-multi_dim_list_sum(crazy_list) ====> 50
+print(multi_dim_list_sum(crazy_list)) ====> 50
 
 ```
 <br>
