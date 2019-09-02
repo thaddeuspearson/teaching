@@ -70,9 +70,9 @@ Cool. We have our to-do list, let's do it one step at a time!
 
 ## Define a Function That Accepts a List
 
-<p>
+
 This is a pretty simple task. Let's name the function `multi_dim_list_sum` and lets give it the parameter `lst`
-</p>
+
 
 ```python
 def multi_dim_list_sum(lst):
