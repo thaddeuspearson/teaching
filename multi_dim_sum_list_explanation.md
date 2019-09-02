@@ -209,10 +209,10 @@ From <a href="https://https://www.geeksforgeeks.org/recursion/">GeeksforGeeks</a
 
 or more simply put:
 
-> A function that calls itself.
+> **A function that calls itself.**
 
 
-We are going to call our function, within our function.  Because of our if statement, this recursion will only happen in our function if the current `elem` we are evaluating is a list.  When our function finda a list, it will re-call itself with the list that it found! 
+We are going to call our function, within our function.  Because of our if statement, this recursion will only happen in our function if the current `elem` we are evaluating is a list.  When our function finds a list, it will re-call itself with the list that it found! 
 
 
 ```python
@@ -259,31 +259,40 @@ test_list = [1, 2,[3, 4]]
 # here is us calling our function
 multi_dim_list_sum(test_list)
 
-# first, our function iterates through our list, and the first elem in test_list (test_list[0]) is 1. Because 1 is a number and not a list, we hit our else statement:
+# first, our function iterates through our list, and the first elem in test_list (test_list[0]) is 1. 
+# because 1 is a number and not a list, we hit our else statement:
     else:
         sum += 1
 
-# now sum = 1, and we move on to our next elem in our test_list (test_list[1]), which is 2. Because 2 is a number and not a list, we hit our else statement again:
+# now sum = 1, and we move on to our next elem in our test_list (test_list[1]), which is 2. 
+# because 2 is a number and not a list, we hit our else statement again:
     else:
         sum += 2
 
-# now sum = 3, and we move on to the third elem in test_list (test_list[2]) which is [3, 4]. Because our third elem is a list, we hit our if statement:
+# now sum = 3, and we move on to the third elem in test_list (test_list[2]) which is [3, 4]. 
+# because our third elem is a list, we hit our if statement:
     if type(elem) == type([]):
         sum += multi_dim_list_sum([3, 4])
 
-# here is where the recursion happens. Our original function "pauses" and our original sum variable is "saved" at 3. We begin to run this new instance of our function, with our new list, [3 , 4] and a new sum starting at 0. Our new instance starts with the first elem of our new list, which is 3. Since 3 is a number, it hits our else statement, and adds 3 to our new sum:
+# here is where the recursion happens. our original function "pauses" and our original sum variable is "saved" at 3. 
+# we begin to run this new instance of our function, with our new list, [3 , 4] and a new sum starting at 0. 
+# our new instance starts with the first elem of our new list, which is 3. 
+# since 3 is a number, it hits our else statement, and adds 3 to our new sum:
     else:
         sum += 3
 
-# our new instance moves on to the second elem in our new list, which is 4.  We hit our else statement, and add 4 to our new sum:
+# our new instance moves on to the second elem in our new list, which is 4.  
+# we hit our else statement, and add 4 to our new sum:
     else:
         sum += 4
 
-# we are now at the end of our for loop. Our new instance is ready to return our new sum, which is 7, back to our original function. Our original function now takes that return value, "unpauses" itself, and evaluates the original if statement. 
+# we are now at the end of our for loop. Our new instance is ready to return our new sum, which is 7, back to our original function. 
+# our original function now takes that return value, "unpauses" itself, and evaluates the original if statement. 
     if type(elem) == type([]):
         sum += 7
 
-# our sum is now 10 and we are finished with our original for loop.  Our function now returns the sum, which is 10.
+# our sum is now 10 and we are finished with our original for loop.  
+# our function now returns the sum, which is 10.
 
     print(return sum) =====> 10
 
