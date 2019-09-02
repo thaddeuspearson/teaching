@@ -301,7 +301,9 @@ multi_dim_list_sum(test_list)
         sum += 4
 
 
-# we are now at the end of our for loop. 
+# we are now at the end of our for loop, and we hit our "base case".
+# the base case is where a recursive function returns its value to the previous function instance.
+# if a recursive function does not have a base case, it will cause a stack overflow error and break the code.
 # our new instance is ready to return our new sum, which is 7, back to our original function. 
 # our original function now takes that return value, "unpauses" itself, and evaluates the original if statement. 
     
