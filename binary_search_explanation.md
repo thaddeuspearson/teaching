@@ -33,36 +33,41 @@ def binsearch(list, val):
 
 <br>
 
-Binary search is a common algorithmic interview question.  When searching with traditional iterative methods, such as nested for loops, there can be many instances when the same two values are being compared, over and over again. We can avoid this, and speed things up using a binary search.
+Binary Search is a common algorithmic interview question.  When searching with traditional iterative methods, such as nested For Loops, there can be many instances when the same two values are being compared, over and over again. We can avoid this, and speed things up using a binary search.
 
 Binary Search will take the mid-point of a sorted list, and compare the value that we are looking for against that mid-point.  If the mid-point is greater than the value, then we know that our value, if it exists in our list, will be to the left of the mid-point.  Conversely, if our value is greater than the mid-point, and it exists in our list, we know it will be to the right of the mid-point in out sorted list.
 
-Example:
-Given the value and this list:
+*Example: Given the value and this list:*
 
 `val = 8`
-`[1,2,3,4,5,6,7,8,9]`
+`list = [1,2,3,4,5,6,7,8,9]`
 
+<br>
 First, binary search finds the current mid-point:
 
 `mid-point = 5`
 
+<br>
 Binary search will then compare our value with our mid-point:
 
 is `val ( > or = or < ) 5` -> `val > 5`
 
+<br>
 Binary search now knows that our value is greater than 5, so it will repeat its search process starting again at the next element in our list, `6`, and find the mid-point between `6` and the end of our list `9`
 
 `mid-point = 7`
 
+<br>
 In the instance like above, where the amount of elements binary search is comparing is even, it will round down, to ensure no elements are skipped.  Now binary search repeats its comparasion with the mid-point:
 
 is `val ( > or = or < ) 7` -> `val > 7` 
 
+<br>
 Just like before, binary search now knows that our value is greater than 7, so it will repeat its search process starting again at the next element in our list, which is `8`.  It finds the mid-point between `8` and `9` (which is 8.5) and rounds down to `8`.
 
 is `val ( > or = or < ) 8` -> `val = 8` 
 
+<br>
 Binary search has found our element after 3 comparasions.  This is an extremely fast way to find an element, if it exists, in a sorted list.  Now lets get to coding!
 
 
