@@ -134,7 +134,7 @@ As always, it is best to start by breaking the problem down in pseudocode.
 ```
 <br>
 
-Ok. That is a lot of pseudocode. Let us go slowly and tackle each item individually.
+Ok. That is a lot of pseudocode. Let us go slowly and tackle each item line by line.
 
 <br>
 
