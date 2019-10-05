@@ -56,7 +56,7 @@ Binary Search will then compare our value with our mid-point:
 
 <br>
 
-`is val ( > or = or < ) 5?` -> `val > 5`
+`is val ( > or = or < ) 5?` --> `val > 5`
 
 <br>
 Binary Search now knows that our value is greater than 5, so it will repeat its search process starting again at the next element in our list, `6`, and find the mid-point between `6` and the end of our list `9`
@@ -70,14 +70,14 @@ In the instance like above, where the amount of elements Binary Search is compar
 
 <br>
 
-`is val ( > or = or < ) 7?` -> `val > 7` 
+`is val ( > or = or < ) 7?` --> `val > 7` 
 
 <br>
 Just like before, Binary Search now knows that our value is greater than 7, so it will repeat its search process starting again at the next element in our list, which is `8`.  It finds the mid-point between `8` and `9` (which is 8.5) and rounds down to `8`.
 
 <br>
 
-`is val ( > or = or < ) 8?` -> `val = 8` 
+`is val ( > or = or < ) 8?` --> `val = 8` 
 
 <br>
 Binary Search has found our element after 3 comparasions.  This is an extremely fast way to find an element, if it exists, in a sorted list.  Now lets get to coding!
@@ -86,7 +86,7 @@ Binary Search has found our element after 3 comparasions.  This is an extremely 
 <br>
 
 ```
-You are given a sorted list of ints.  This list is sorted from least to greatest. 
+You are given a sorted list of ints. This list is sorted from least to greatest. 
 This list will only contain ints. Write a function that implements a Binary Search with an iterative approach.
 ```
 <br>
@@ -110,11 +110,11 @@ As always, it is best to start by breaking the problem down in pseudocode.
 
         # elif the mid-point is greater than the value
 
-            # redefine the end-point to be the element immediately preceeding the       current mid-point and search again
+            # redefine the end-point to be the element immediately preceeding the current mid-point and search again
 
         # else the mid-point is less than the value, 
 
-            # redefine the start-point to be the element immediately following the      current mid-point and search again
+            # redefine the start-point to be the element immediately following the current mid-point and search again
     
     # if the value does not exist in the list, return -1
 
