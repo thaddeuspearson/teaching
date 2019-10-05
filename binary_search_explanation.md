@@ -86,8 +86,8 @@ Binary Search has found our element after 3 comparasions.  This is an extremely 
 <br>
 
 ```
-You are given a sorted list of ints. This list is sorted from least to greatest. 
-This list will only contain ints. Write a function that implements a Binary Search with an iterative approach.
+You are given a list of ints, sorted from least to greatest. This list will only contain ints. 
+Write a function that implements a Binary Search with an iterative approach.
 ```
 <br>
 
