@@ -82,7 +82,6 @@ Just like before, Binary Search now knows that our value is greater than 7, so i
 <br>
 Binary Search has found our element after 3 comparasions.  This is an extremely fast way to find an element, if it exists, in a sorted list.  Now lets get to coding!
 
-
 <br>
 
 ```
