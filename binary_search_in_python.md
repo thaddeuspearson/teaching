@@ -116,7 +116,7 @@ In the instances like above, where the amount of elements Binary Search is compa
 
 <br>
 
-Just like before, Binary Search now knows that our value is greater than 7, so it will repeat its search process starting again at the next element in our list, which is `8`.  It finds the mid-point between `8` and `9` (which is 8.5) and rounds down to `8`.
+Just like before, Binary Search now knows that our value is greater than `7`, so it will repeat its search process starting again at the next element greater than `7` in our list, which is `8`.  It finds the mid-point between `8` and `9` (which is 8.5) and rounds down to `8`.
 
 <br>
 
