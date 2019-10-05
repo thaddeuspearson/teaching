@@ -1,4 +1,4 @@
-# Implement an Iterative Binary Search in Python #
+# Implement a Binary Search in Python #
 
 <details><summary><b>TL:DR... Iterative Solution</b></summary>
 
@@ -94,7 +94,7 @@ Binary Search has found our element after 3 comparasions.  This is an extremely 
 <br>
 <br>
 
-## Iterative Binary Search ##
+# Iterative Binary Search #
 
 <br>
 
