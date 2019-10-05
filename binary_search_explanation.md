@@ -1,6 +1,6 @@
 # Implement an Iterative Binary Search in Python #
 
-<details><summary><b>Iterative Solution</b></summary>
+<details><summary><b>TL:DR... Iterative Solution</b></summary>
 
 ```python
 def binsearch(list, val):
