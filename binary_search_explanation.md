@@ -49,7 +49,7 @@ First, Binary Search finds the current mid-point:
 
 <br>
 
-`mid-point = 5`
+`mid_point = 5`
 
 <br>
 Binary Search will then compare our value with our mid-point:
@@ -63,7 +63,7 @@ Binary Search now knows that our value is greater than 5, so it will repeat its 
 
 <br>
 
-`mid-point = 7`
+`mid_point = 7`
 
 <br>
 In the instance like above, where the amount of elements Binary Search is comparing is even, it will round down, to ensure no elements are skipped.  Now Binary Search repeats its comparasion with the mid-point:
