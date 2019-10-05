@@ -84,7 +84,7 @@ Given this value and this list:
 
 <br>
 
-First, Binary Search finds the current mid-point:
+First, Binary Search finds the current mid-point in our list:
 
 <br>
 
@@ -100,7 +100,7 @@ Binary Search will then compare our value with our mid-point:
 
 <br>
 
-Binary Search now knows that our value is greater than `5`, so it will repeat its search process starting again at the next element in our list, `6`, and find the mid-point between `6` and the end of our list `9`.
+Binary Search now knows that our value is greater than `5`, so it will repeat its search process starting again at the next element that is greater than `5` in our list, which is `6`. Binary Search will now find the mid-point between `6` and the end of our list `9`.
 
 <br>
 
