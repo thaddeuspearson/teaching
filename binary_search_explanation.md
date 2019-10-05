@@ -115,7 +115,7 @@ As always, it is best to start by breaking the problem down in pseudocode.
 
     # define a start-point and end-point of the search range
 
-    # continue the search unless the end-point is not before the start-point
+    # continue the search unless the start-point passes the end-point
 
         # find the mid-point of the current search range
 
@@ -123,11 +123,11 @@ As always, it is best to start by breaking the problem down in pseudocode.
 
         # elif the mid-point is greater than the value
 
-            # redefine the end-point to be the element immediately preceeding the current mid-point and search again
+            # redefine the end-point as the element before the mid-point, search again
 
         # else the mid-point is less than the value, 
 
-            # redefine the start-point to be the element immediately following the current mid-point and search again
+            # redefine the start-point as the element after the mid-point, search again
     
     # if the value does not exist in the list, return -1
 
