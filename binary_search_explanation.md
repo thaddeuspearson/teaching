@@ -171,7 +171,7 @@ Great.  Now our Binary Search will begin with the entire list.
 ## Continue the Search / While Loop ##
 
 
-In most circumstances, if you know how many iterations a loop needs to complete, it is best practice to write a For Loop. However, when you do not know how many times a loop needs to repeat to finish its task, a While Loop is the best approach.
+In most circumstances, if you know how many iterations a loop needs to complete its task, it is best practice to write a For Loop. However, when you do not know how many times a loop needs to repeat to finish its task, a While Loop is the best approach.
 
 ```python
 def bin_search(list, val):
