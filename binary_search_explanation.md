@@ -45,30 +45,44 @@ Binary Search will take the mid-point of a sorted list, and compare the value th
 
 <br>
 First, binary search finds the current mid-point:
+
 <br>
+
 `mid-point = 5`
 
 <br>
+
 Binary search will then compare our value with our mid-point:
+
 <br>
+
 `is val ( > or = or < ) 5?` -> `val > 5`
 
 <br>
+
 Binary search now knows that our value is greater than 5, so it will repeat its search process starting again at the next element in our list, `6`, and find the mid-point between `6` and the end of our list `9`
+
 <br>
+
 `mid-point = 7`
 
 <br>
+
 In the instance like above, where the amount of elements binary search is comparing is even, it will round down, to ensure no elements are skipped.  Now binary search repeats its comparasion with the mid-point:
+
 <br>
+
 `is val ( > or = or < ) 7?` -> `val > 7` 
 
 <br>
 Just like before, binary search now knows that our value is greater than 7, so it will repeat its search process starting again at the next element in our list, which is `8`.  It finds the mid-point between `8` and `9` (which is 8.5) and rounds down to `8`.
+
 <br>
+
 `is val ( > or = or < ) 8?` -> `val = 8` 
 
 <br>
+
 Binary search has found our element after 3 comparasions.  This is an extremely fast way to find an element, if it exists, in a sorted list.  Now lets get to coding!
 
 
