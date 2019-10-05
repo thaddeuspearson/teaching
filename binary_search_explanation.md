@@ -192,8 +192,6 @@ def bin_search(list, val):
 
         if mid == val:
             return "The value is located at index " + str(mid)
-
-   
 ```
 
 Note, // is <a href="https://www.w3schools.com/python/python_operators.asp">floor division</a>.  This will divide the two ints, and round down if the result is a float.
