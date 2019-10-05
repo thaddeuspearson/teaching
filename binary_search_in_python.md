@@ -191,7 +191,7 @@ Easiest step of the implementation :)
 
 We need to tell our function which index to begin our Binary Search from, and which index to end at.  Seems intuitive to call these points `start` and `end`.  Since we want to begin our first Binary Search with the whole `list`, we will set the value of `start` to `0` and the value of `end` to `len(list) - 1`.
 
-Remember: `len(list)` will give us the total number of elements inside of the list, but since lists are zero-indexed, we have to subtract 1 from `len(list)` to access the final element in `list`
+Remember: `len(list)` will give us the total number of elements inside of the list, but since lists are zero-indexed, we have to subtract `1` from `len(list)` to access the final element in `list`
 
 ```python
 def itr_bin_search(list, val):
