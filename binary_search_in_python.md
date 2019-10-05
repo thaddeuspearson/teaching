@@ -240,6 +240,8 @@ def itr_bin_search(list, val):
 
 Note, `//` is <a href="https://www.w3schools.com/python/python_operators.asp"><b>floor division</b></a>.  This will divide the two ints, and round down if the result is a float.  By adding together the `start` and `end` indexes and floor dividing by `2`, we are given the index of the mid-point, which is what we were looking for.
 
+Further, if the mid-point, `mid` is equal to our value `val` then our search is complete and we should return the index `mid`.
+
 <br>
 
 ## Elif and Else Statements / Winnowing the Binary Search ##
