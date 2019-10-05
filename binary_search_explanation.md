@@ -172,14 +172,14 @@ def bin_search(list, val):
     while end >= start:
 ```
 
-As our search range becomes smaller and smaller, while looking for `val`, if at any point, the end-point becomes less than our start-point, we will not be able to find the mid-point anymore, and we should break out of our loop.
+As our search range becomes smaller and smaller while looking for `val`, if at any point, the end-point becomes less than our start-point, we will not be able to find the mid-point anymore, and we should break out of our loop.
 
 <br>
 
 ## Find and Test the current Mid-Point  ##
 
 
-We are going to combine the next two pseudocode elements together for brevity.  Our program will find the mid-point, test to see if it is our given value, and if it is, return it.
+We are going to combine the next two pseudocode elements together for brevity.  Our program will find the mid-point, test it to see if it equals our given value, and if it does, return it.
 
 ```python
 def bin_search(list, val):
