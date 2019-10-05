@@ -74,7 +74,7 @@ Binary Search will take the mid-point of a sorted list, and compare the value th
 
 <br>
 
-**Example**
+### Example ###
 
 Given this value and this list: 
 
