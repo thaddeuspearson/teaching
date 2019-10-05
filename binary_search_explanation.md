@@ -33,7 +33,7 @@ def binsearch(list, val):
 
 <br>
 
-Binary Search is a common algorithmic interview question.  When searching with traditional iterative methods, such as nested For Loops, there can be many instances when the same two values are being compared, over and over again. We can avoid this, and speed things up using a Binary Search.
+Binary Search is a common algorithmic interview question.  When searching with traditional iterative methods, such as nested For Loops in a linear search, there can be many instances when the same two values are being compared, over and over again. We can avoid this, and speed things up using a Binary Search.
 
 Binary Search will take the mid-point of a sorted list, and compare the value that we are looking for against that mid-point.  If the mid-point is greater than the value, then we know that our value, if it exists in our list, will be to the left of the mid-point.  Conversely, if our value is greater than the mid-point, and it exists in our list, we know it will be to the right of the mid-point in out sorted list.
 
