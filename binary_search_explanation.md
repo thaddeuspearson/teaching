@@ -1,4 +1,4 @@
-# Implement a Binary Search for a value in a sorted list of ints in Python
+# Implement a Binary Search in Python Iteratively #
 
 <details><summary><b>Iterative Solution</b></summary>
 
