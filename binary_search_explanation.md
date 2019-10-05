@@ -176,7 +176,7 @@ As our search range becomes smaller and smaller while looking for `val`, if at a
 
 <br>
 
-## Find and Test the current Mid-Point  ##
+## Find and Test the Current Mid-Point  ##
 
 
 We are going to combine the next two pseudocode elements together for brevity.  Our program will find the mid-point, test it to see if it equals our given value, and if it does, return it.
