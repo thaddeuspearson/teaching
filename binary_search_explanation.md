@@ -201,7 +201,7 @@ Note, `//` is <a href="https://www.w3schools.com/python/python_operators.asp"><b
 ## Elif and Else Statements / Winnowing the Binary Search ##
 
 
-The next two statements are to allow our program to begin to zero in to the location of `val` in `list` *assuming that it exists in `list`, and that `list` is sorted from least to greatest*
+The next two statements will allow our program to zero in on the location of `val` in `list` (*assuming that it exists in `list*)
 
 If `mid` is greater than `val`, we know that `val` would be in the sublist to the left of the mid-point.  We then will redefine `end` to be the element that immediately preceeds `mid`, and run our search again.
 
