@@ -108,7 +108,7 @@ Binary Search now knows that our value is greater than `5`, so it will repeat it
 
 <br>
 
-In the instance like above, where the amount of elements Binary Search is comparing is even, it will round down, to ensure no elements are skipped.  Now Binary Search repeats its comparasion with the mid-point:
+In the instances like above, where the amount of elements Binary Search is comparing is even, Binary Search will round down to ensure no elements are skipped.  Now Binary Search repeats its comparasion with the new mid-point:
 
 <br>
 
