@@ -3,7 +3,7 @@
 <details><summary><b>TL:DR... Iterative Solution</b></summary>
 
 ```python
-def binsearch(list, val):
+def itr_bin_search(list, val):
     # define the start and end of the Binary Search range
     start = 0
     end = len(list) - 1
@@ -14,7 +14,7 @@ def binsearch(list, val):
         # find the mid-point of the current search range
         mid = (start + end) // 2
 
-        # if the mid-point is the value, return it
+        # if the mid-point is equal to the value, return it
         if list[mid] == val:
             return "The value is located at index " + str(mid)
         
@@ -28,6 +28,41 @@ def binsearch(list, val):
 
     # if the value does not exist in the list, return -1
     return -1
+```
+</details>
+
+<br>
+
+<details><summary><b>TL:DR... Recursive Solution</b></summary>
+
+```python
+def rec_bin_search(list, val, start, end):
+    # continue searching if the end of the search range is greater than the beginning
+    if end >= start:
+        
+        # find the mid-point of the current search range
+        mid = (start + end) // 2
+     
+        # if the mid-point is equal to the value, return it
+        if list[mid] == val:
+            return "The value is located at index " + str(mid)
+
+        # if the mid-point is greater than the value, redo the search with the end now equal to the previous element before the current mid-point in the list
+        elif list[mid] > val:
+            new_start = start
+            new_end = mid - 1
+        
+        # if the mid-point is less than the value, redo the search with the start now equal to the following element after the current mid-point in the list   
+        else:
+            new_start = mid + 1
+            new_end = end
+     
+        # recursively call rec_bin_search with the new start and end points
+        return rec_bin_search(list, val, new_start, new_end)
+    
+    # if the value does not exist in the list, return -1
+    else:
+        return -1
 ```
 </details>
 
@@ -141,10 +176,10 @@ Ok. That is a lot of pseudocode. Let us go slowly and tackle each item line by l
 ## Define the Function ##
 
 
-Since this function is an implementation of Binary Search, lets call the function `bin_search`.  We will give it the parameters `list` and `val` for the given list and value respectively.
+Since this function is an iterative implementation of Binary Search, lets call the function `itr_bin_search`.  We will give it the parameters `list` and `val` for the given list and value respectively.
 
 ```python
-def bin_search(list, val):
+def itr_bin_search(list, val):
 ```
 
 Easiest step of the implementation :)
@@ -159,7 +194,7 @@ We need to tell our function which index to begin our Binary Search from, and wh
 Remember: `len(list)` will give us the total number of elements inside of the list, but since enumeration is zero-indexed, we have to subtract 1 from `len(list)` to access the final element in `list`
 
 ```python
-def bin_search(list, val):
+def itr_bin_search(list, val):
     start = 0
     end = len(list) - 1
 ```
@@ -174,7 +209,7 @@ Great.  Now our Binary Search will begin with the entire list.
 In most circumstances, if you know how many iterations a loop needs to complete its task, it is best practice to write a For Loop. However, when you do not know how many times a loop needs to repeat to finish its task, a While Loop is the best approach.
 
 ```python
-def bin_search(list, val):
+def itr_bin_search(list, val):
     start = 0
     end = len(list) - 1
 
@@ -191,7 +226,7 @@ As our search range becomes smaller and smaller while looking for `val`, if at a
 We are going to combine the next two pseudocode elements together for brevity.  Our program will find the mid-point, test it to see if it equals our given value, and if it does, return it.
 
 ```python
-def bin_search(list, val):
+def itr_bin_search(list, val):
     start = 0
     end = len(list) - 1
     
@@ -218,7 +253,7 @@ Conversely, if `mid` is less than `val`, then `val` would have to exist in the s
 
 
 ```python
-def bin_search(list, val):
+def itr_bin_search(list, val):
     start = 0
     end = len(list) - 1
 
@@ -246,7 +281,7 @@ The preceeding code will continue to loop through `list` until it reaches `val`,
  If we break out of our loop, it means that `val` was not found in `list` and we need to return -1.
 
 ```python
-def bin_search(list, val):
+def itr_bin_search(list, val):
     start = 0
     end = len(list) - 1
 
@@ -267,3 +302,69 @@ def bin_search(list, val):
 ```
 
 And that is our function!  Our function works on a list that is sorted in ascending order, but we could have just as easilly implemented it on a list that is in decending order.  what is most important to remember is that **Binary Search will only work if the list you are given is a sorted list**
+
+
+# Recursive Binary Search #
+
+Another common implementation of Binary Search involves the use of Recursion.  Now that we understand how Binary Search works, let us solve the same problem with a Recursive solution.
+
+<br>
+
+```
+You are given a list of ints, sorted from least to greatest. This list will only contain ints. 
+Write a function that implements a Binary Search with a recursive approach.
+```
+<br>
+
+Breaking it down in pseudocode.
+
+<br>
+
+```python
+
+# define the function that accepts a list and a value, start-point, and end-point
+
+    # continue the search unless the start-point passes the end-point
+
+        # find the mid-point of the current search range
+
+        # if the mid-point is equal to the value, return it
+
+        # elif the mid-point is greater than the value
+            
+            # keep the new_start as the previous start
+            # redefine the new end-point as the element before the mid-point   
+
+        # else the mid-point is less than the value, 
+
+            # redefine the new start-point as the element after the mid-point 
+            # keep the new_end as the previous end
+    
+    # if the value does not exist in the list, return -1
+
+```
+<br>
+
+```python
+def rec_bin_search(lst, val, start, end):
+    if end >= start:
+        mid = (start + end) // 2
+     
+        if lst[mid] == val:
+            return "The value is located at index " + str(mid)
+
+        elif lst[mid] > val:
+            new_start = start
+            new_end = mid - 1
+            
+        else:
+            new_start = mid + 1
+            new_end = end
+     
+        return rec_bin_search(lst, val, new_start, new_end)
+  
+    else:
+        return -1
+
+```
+ 
