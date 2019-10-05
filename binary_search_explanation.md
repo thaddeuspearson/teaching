@@ -1,4 +1,4 @@
-# Implement a Binary Search in Python Iteratively #
+# Implement an Iterative Binary Search in Python #
 
 <details><summary><b>Iterative Solution</b></summary>
 
