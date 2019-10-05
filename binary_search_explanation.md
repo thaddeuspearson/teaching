@@ -39,8 +39,9 @@ Binary Search will take the mid-point of a sorted list, and compare the value th
 
 <br>
 
-**Example: Given this value and this list:**
+**Example**
 
+Given this value and this list:
 `val = 8``list = [1,2,3,4,5,6,7,8,9]`
 
 <br>
