@@ -13,7 +13,7 @@ def multi_dim_list_sum(lst):
         if type(item) == type([]):
             
             # call the multi_dim_sum_list function recursively
-            sum += multi_dim_sum_list(item)
+            sum += multi_dim_list_sum(item)
 
         else:
 
