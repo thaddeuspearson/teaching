@@ -303,7 +303,7 @@ def itr_bin_search(list, val):
     return -1
 ```
 
-And that is our function!  Our function works on a list that is sorted in ascending order, but we could have just as easilly implemented it on a list that is in decending order.  what is most important to remember is that **Binary Search will only work if the list you are given is a sorted list**
+And that is our function!  Our function works on a list that is sorted in ascending order, but we could have just as easilly implemented it on a list that is in decending order.  what is most important to remember is that **Binary Search will only work if the list you are given is a sorted list**.
 
 <br>
 
