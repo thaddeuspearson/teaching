@@ -83,7 +83,7 @@ Just like before, Binary Search now knows that our value is greater than 7, so i
 Binary Search has found our element after 3 comparasions.  This is an extremely fast way to find an element, if it exists, in a sorted list.  Now lets get to coding!
 
 <br>
-
+<br>
 ```
 You are given a list of ints, sorted from least to greatest. This list will only contain ints. 
 Write a function that implements a Binary Search with an iterative approach.
