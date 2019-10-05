@@ -421,7 +421,7 @@ This is why we passed in the `start` and `end` parameters in the function defini
 
 <br>
 
-## Recursively Call our Function ##
+## Recursively Call Our Function ##
 
 Recall that Recursion if a function that calls itself.  A few things that are necessary in every recursion:
 
@@ -447,7 +447,7 @@ def rec_bin_search(lst, val, start, end):
      
         return rec_bin_search(lst, val, new_start, new_end)
 ```
-we have our base case (*both if statements*), our return statement (*we return the recursive call*), and our invocation (*we call rec_bin_search with out new parameters*).  We are almost done!
+We have our base case (*both if statements*), our return statement (*we return the recursive call*), and our invocation (*we call rec_bin_search with out new parameters*).  We are almost done!
 
 <br>
 
@@ -485,4 +485,4 @@ def rec_bin_search(list, val, start, end):
 
  <br>
 
- For additional resources, check out <a href="https://www.geeksforgeeks.org/binary-search/"><b>Geeks for Geeks</b></a>.  They have implemented Binary search in many different languages and have a few other links that elaborate on this algorithm.
+ For additional resources, check out <a href="https://www.geeksforgeeks.org/binary-search/"><b>Geeks for Geeks</b></a>.  They have implemented Binary Search in many different languages and have a few other links that elaborate on this algorithm.
