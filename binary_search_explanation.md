@@ -41,9 +41,7 @@ B will take the mid-point of a sorted list, and compare the value that we are lo
 
 **Example**
 
-Given this value and this list:
-<br>
-
+Given this value and this list: <br>
 `val = 8, list = [1,2,3,4,5,6,7,8,9]`
 
 <br>
