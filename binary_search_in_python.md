@@ -275,10 +275,10 @@ The preceeding code will continue to loop through `list` until it reaches `val`,
 
 <br>
 
-## Finishing it Up ##
+## Finishing It Up ##
 
 
- If we break out of our loop, it means that `val` was not found in `list` and we need to return -1.
+ If we break out of our loop, it means that `val` was not found in `list` and we need to `return -1`.
 
 ```python
 def itr_bin_search(list, val):
@@ -340,18 +340,101 @@ Breaking it down in pseudocode.
 
             # redefine the new start-point as the element after the mid-point 
             # keep the new_end as the previous end
-    
+
+        # recursively call our function with the new start and end points
+
     # if the value does not exist in the list, return -1
 
 ```
 <br>
+
+The pseudocode is incredibly similar to the iterative approach.  This will help us understand the recursive implementation!
+
+<br>
+
+## Define the Function ##
+
+Keeping with the theme, let us call this function `rec_bin_search`.  We will give it the parameters `list` and `val` just like before, however, in this approach, we will also pass `start` and `end` as parameters, rather than define them within the function.  Why we do this will become more clear as we move on.
+
+```python
+def rec_bin_search(list, val, start, end):
+```
+
+Off to a nice start!
+
+<br>
+
+## Continue the Search Base Case ##
+
+In the iterative solution, this is where we built our While Loop and defined it's base case.  In the Recusive solution, we simply drop the While Loop, and replace it with an if statement.
+
+```python
+def rec_bin_search(list, val, start, end):
+    if end >= start:
+```
+This will serve a similar purpose in that if the start point ever crosses the end point, we know that `val` does not exist in `list` and we should break out of our recursive loop.
+
+<br>
+
+## Find and Test the Mid-Point ##
+
+This is identical to our iterative implementation. Don't forget about floor division `//`.
+
+```python
+def rec_bin_search(list, val, start, end):
+    if end >= start:
+        mid = (start + end) // 2
+     
+        if list[mid] == val:
+            return "The value is located at index " + str(mid)
+```
+Moving right along :)
+
+<br>
+
+## Elif and Else Statements / Winnowing the Binary Search ## 
+
+Just like before, our function needs to drill down to  our value, using the Binary Search process.  However, in each instance we will need to establish a `new_start` and a `new_end` because we are setting up our parameters for our recursive call.
+
+If `mid` is greater than `val`, we know that `val` would be in the sublist to the left of the mid-point.  We then will define `new_start` to be equal to the previous `start` and `new_end` to be the index that immediately preceeds `mid`.
+
+Conversely, if `mid` is less than `val`, then `val` would have to exist in the sublist to the right of `mid`. We then will define `new_start` to be equal to the index that immediately follows `mid` and define `new_end` to be equal to the previous `end`.
+
+
+```python
+def rec_bin_search(list, val, start, end):
+    if end >= start:
+        mid = (start + end) // 2
+     
+        if list[mid] == val:
+            return "The value is located at index " + str(mid)
+
+        elif list[mid] > val:
+            new_start = start
+            new_end = mid - 1
+            
+        else:
+            new_start = mid + 1
+            new_end = end
+```
+This is why we passed in the `start` and `end` parameters in the function definition of `rec_bin_search`.  We now have our new arguments to pass in to our recursive calls.
+
+<br>
+
+## Recursively Call our Function ##
+
+Recall that Recursion if a function that calls itself.  A few things that are necessary in every recursion:
+
+  * a base case (*to break our recursive loop*)
+  * a return statement (*to return our result back up the stack*)
+  * an invocation with arguments (*if you don't call it, it won't recurse*)
 
 ```python
 def rec_bin_search(lst, val, start, end):
     if end >= start:
         mid = (start + end) // 2
      
-        if lst[mid] == val:
+        if list[mid] == val:
             return "The value is located at index " + str(mid)
 
         elif lst[mid] > val:
@@ -363,9 +446,43 @@ def rec_bin_search(lst, val, start, end):
             new_end = end
      
         return rec_bin_search(lst, val, new_start, new_end)
+```
+we have our base case (*both if statements*), our return statement (*we return the recursive call*), and our invocation (*we call rec_bin_search with out new parameters*).  We are almost done!
+
+<br>
+
+## Finishing It Up
+
+
+The last bit of business to attend to is if our function does not find `val` in `list`.  Just like before, we will `return -1` in this instance.
+
+```python
+def rec_bin_search(list, val, start, end):
+    if end >= start:
+        mid = (start + end) // 2
+     
+        if list[mid] == val:
+            return "The value is located at index " + str(mid)
+
+        elif list[mid] > val:
+            new_start = start
+            new_end = mid - 1
+            
+        else:
+            new_start = mid + 1
+            new_end = end
+     
+        return rec_bin_search(list, val, new_start, new_end)
   
     else:
         return -1
 
 ```
  
+ <br>
+
+ Boom.  A Recursive implementation of Binary Search in Python.  
+
+ <br>
+
+ For additional resources, check out <a href="https://www.geeksforgeeks.org/binary-search/"><b>Geeks for Geeks</b></a>.  They have implemented Binary search in many different languages and have a few other links that elaborate on this algorithm.
